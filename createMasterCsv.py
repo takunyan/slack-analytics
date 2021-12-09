@@ -1,4 +1,3 @@
-# channelsとusersのCSVを作成する
 import pandas as pd
 import json
 
@@ -8,7 +7,7 @@ for filename in files:
   with open('data/' + filename +'.json', 'r', encoding='utf-8') as f:
       d = json.loads(f.read())
 
-  df = pd.io.json.json_normalize(d, sep='_')
+  df = pd.json_normalize(d, sep='_')
   if filename == 'users':
     df['display_name_custom'] = ""
     

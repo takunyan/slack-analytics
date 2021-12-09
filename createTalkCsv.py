@@ -71,7 +71,7 @@ class CreateTalkCsv:
                     talks_all.append(talk)
 
                     # reaction
-                    if row['reactions'] is not "":
+                    if row['reactions'] != "":
                         reactions = row['reactions']
                         # name/users/user
                         for reaction in reactions:
